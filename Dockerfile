@@ -2,7 +2,7 @@ FROM gcr.io/kaniko-project/executor:debug as kaniko
 
 FROM jenkins/inbound-agent:alpine as jnlp
 
-FROM alpine:3.16.2
+FROM alpine:3.19.1
 
 RUN apk add --no-cache openjdk11-jre git curl bash aws-cli
 
