@@ -4,7 +4,14 @@ FROM jenkins/inbound-agent:alpine as jnlp
 
 FROM alpine:3.19.1
 
-RUN apk add --no-cache openjdk11-jre git curl bash aws-cli
+RUN apk add --no-cache --update \
+  coreutils \
+  bash \
+  jq \
+  git \
+  curl \
+  openjdk11-jre \
+  aws-cli
 
 COPY --from=kaniko /kaniko /kaniko
 RUN mkdir -p /kaniko/.docker
