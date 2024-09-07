@@ -2,7 +2,7 @@ FROM gcr.io/kaniko-project/executor:debug as kaniko
 
 FROM jenkins/inbound-agent:alpine as jnlp
 
-FROM alpine:3.19.1
+FROM alpine:3.20.3
 
 RUN apk add --no-cache --update \
   coreutils \
