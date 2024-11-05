@@ -10,7 +10,7 @@ RUN apk add --no-cache --update \
   jq \
   git \
   curl \
-  openjdk11-jre \
+  openjdk21-jre \
   aws-cli
 
 COPY --from=kaniko /kaniko /kaniko
