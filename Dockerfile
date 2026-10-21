@@ -1,6 +1,6 @@
 FROM gcr.io/kaniko-project/executor:debug as kaniko
 
-FROM jenkins/inbound-agent:alpine as jnlp
+FROM jenkins/inbound-agent:alpine-jdk21 as jnlp
 
 FROM alpine:3.19.1
 
